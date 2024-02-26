@@ -12,13 +12,13 @@ function App() {
   }, [])
 
   const onClose = () =>{
-    tg.close
+    tg.close()
   }
 
 
   return (
     <div className="App">
-      автв
+      автвdfnddddd
      <button onClick={onClose}>Закрыть</button>
     </div>
   );
