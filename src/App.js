@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      автвdfnddddd
+      проверка
      <button onClick={onClose}>Закрыть</button>
     </div>
   );
