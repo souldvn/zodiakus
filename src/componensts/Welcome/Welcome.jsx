@@ -2,9 +2,7 @@ import React from 'react'
 import s from './Welcome.module.css'
 
 
-import welpic1 from '../../../img/Onboardingone.svg'
-import welpic2 from '../../../img/Onboardingtwo.svg'
-import welpic3 from '../../../img/Onboardingthree.svg'
+import welpic1 from '../../img/Onboardingone.svg'
 
 const Welcome = () => {
   return (
