@@ -12,8 +12,10 @@
 
 .pic{
     display: block;
-    margin: 24px auto 0 auto;
+    margin: 0 auto 0 auto;
+    padding-top: 24px;
     width: 90%;
+    height: 385px;
 }
 
 .action{
