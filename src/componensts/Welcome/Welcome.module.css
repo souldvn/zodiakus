@@ -10,29 +10,56 @@
 
 .pic{
     display: block;
-    margin: 24px auto;
+    margin: 24px auto 0 auto;
     width: 90%;
 }
 
 .action{
+    display: block;
     background-color: #fff;
     height: 100%;
     border-radius: 30px 30px 0 0;
+    padding: 20px;
 }
 
 .descript{
-    font-size: 24px;
-    font-weight: 700px;
+    
 }
 
 .title{
-
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 16px;
 }
 
 .text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5%;
 
 }
 
 .buttons{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 
+    
+}
+
+.next{
+    background-color: #7E46E8;
+    border: none;
+    border-radius: 20px;
+    height: 56px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.skip{
+    height: 56px;
+    border-radius: 20px;
+    background-color: white;
+    border-color: #7E46E8;
 }
