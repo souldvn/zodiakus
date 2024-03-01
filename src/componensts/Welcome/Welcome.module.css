@@ -1,12 +1,14 @@
 .main{
-    width: 100vv;
-    height: 100vh;
+    
+    width: 100%;
+    height: 100vv;
     background: url('../../img/background.svg');
     background-size:  cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
+
 
 .pic{
     display: block;
