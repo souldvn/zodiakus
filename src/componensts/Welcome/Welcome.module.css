@@ -14,7 +14,7 @@
 .pic{
     display: block;
     margin: 0 auto 0 auto;
-    padding-top: 24px;
+    padding-top: 15px;
     width: 90%;
     /* height: 355px; */
     position: relative;
@@ -23,7 +23,7 @@
 
 .action{
     position: absolute;
-    transform: translateY(-10%);
+    transform: translateY(-15%);
     width: 100vv;
     /* display: block;  */
     background-color: #fff;
