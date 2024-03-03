@@ -6,6 +6,7 @@
     background-size:  cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    overflow-y: hidden;
     /* position: relative; */
 }
 
@@ -22,7 +23,7 @@
 
 .action{
     position: absolute;
-    transform: translateY(-14%);
+    transform: translateY(-10%);
     width: 100vv;
     /* display: block;  */
     background-color: #fff;
