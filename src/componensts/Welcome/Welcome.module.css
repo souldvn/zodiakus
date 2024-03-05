@@ -3,9 +3,7 @@
     flex-direction: column;
     background-image: url(../../img/background.svg);
     height: 100vh;
-
 }
-
 
 .pic{
     display: block;
@@ -29,20 +27,19 @@
 .descript{
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    
+    gap: 14px;    
 }
 
 .title{
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     color: black;
 
 }
 
 .text{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: black;
 
 }
@@ -56,7 +53,7 @@
 
 .next{
     background-color: #7E46E8;
-    color: #fff;
+    color: white;
     border: 1px;
     font-weight: 400;
     font-size: 16px;
