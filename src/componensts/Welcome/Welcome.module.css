@@ -2,39 +2,35 @@
     
     width: 100%;
     /* height: 725px; */
-    background: url('../../img/background.svg');
+    background-image: url('../../img/background.svg');
     background-size:  cover;
     background-repeat: no-repeat;
     overflow: hidden;
     overflow-y: hidden;
-    /* position: relative; */
+    position: relative;
+    z-index: -2;
 }
 
 
 .pic{
+    position: absolute;
+    z-index: -1;
     display: block;
     margin: 0 auto 0 auto;
     padding-top: 15px;
     width: 90%;
     /* height: 355px; */
     position: relative;
-    margin-bottom: -20%;
+    margin-bottom: -25%;
     
 }
 
 .action{
-    position: absolute;
-    /* transform: translateY(15%); */
-    /* bottom: 0px; */
-    width: 100vv;
-    height: 100vh;
-    z-index: 4;
-    display: block; 
+    /* position: absolute; */
     margin: 0 auto 0 auto;
     background-color: #fff;
-    height: 100%;
     border-radius: 30px 30px 0 0;
-    padding: 20px 20px 25px 20px;
+    padding: 20px;
 }
 
 .descript{
@@ -88,18 +84,15 @@
 
 @media (min-height: 626px) and (max-height: 1024px) {
     .action{
-        /* position: absolute; */
-        /* transform: translateY(15%); */
-        /* bottom: 0px; */
-        width: 100vv;
+        width: 100vw;
         height: 364px;
-        position: absolute;
         display: block; 
         margin: 0 auto 0 auto;
         background-color: #fff;
         height: 100%;
         border-radius: 30px 30px 0 0;
         padding: 20px 20px 25px 20px;
+        
     }
 
     .pic{
@@ -107,7 +100,6 @@
         margin: 0 auto 0 auto;
         padding-top: 15px;
         width: 90%;
-        /* height: 355px; */
         position: relative;
         margin-bottom: -20%;
         
