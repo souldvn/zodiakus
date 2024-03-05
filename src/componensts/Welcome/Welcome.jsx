@@ -1,10 +1,24 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import s from './Welcome.module.css'
 
 
 import welpic1 from '../../img/Onboardingone.svg'
 
 const Welcome = () => {
+
+  const navigate = useNavigate()
+
+  const handleClick = (path) =>{
+    if (path === '/zodiakus'){
+      navigate('/zodiakus')
+    }
+  }
+
+
+
+
+
   return (
     <div className={s.main}>
         <img className={s.pic} src={welpic1} alt="Onboarding one" />
@@ -14,7 +28,7 @@ const Welcome = () => {
             <p className={s.text}>Добро пожаловать! Здесь вы найдёте персонализированный прогноз для вашего знака зодиака. Узнайте, что звезды говорят о вашем будущем и получите ценные советы для своей жизни.</p>
             </div>
             <div className={s.buttons}>
-              <button className={s.next}>Далее</button>
+              <button onClick={() => handleClick('/zodiakus')} className={s.next}>Далее</button>
               <button className={s.skip}>Пропустить</button>
             </div>
           
