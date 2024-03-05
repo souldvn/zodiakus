@@ -87,8 +87,8 @@
 @media (min-height: 626px) and (max-height: 1024px) {
     .action{
         position: absolute;
-        transform: translateY(-18%);
-        bottom: 0px;
+        /* transform: translateY(-18%); */
+        bottom: 115px;
         width: 100vv;
         max-height: 100vv;
         
