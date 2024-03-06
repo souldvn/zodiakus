@@ -14,8 +14,14 @@ const Weltwo = () => {
     if (path === '/start'){
       navigate('/start')
       setIsMainOut(true);
+
+      setTimeout(() => {
+        setIsMainOut(false);
+    }, 500);
+
     }
   }
+  
 
 
 
