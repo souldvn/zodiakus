@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import s from './Weltwo.module.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -8,17 +8,19 @@ import welpic2 from '../../img/Onboardingtwo.svg'
 const Weltwo = () => {
 
     const navigate = useNavigate()
+    const [isMainOut, setIsMainOut] = useState(false);
 
   const handleClick = (path) =>{
     if (path === '/start'){
       navigate('/start')
+      setIsMainOut(true);
     }
   }
 
 
 
   return (
-    <div className={s.main}>
+    <div className={`${s.main} ${isMainOut ? s.main_out : ''}`}>
         <img className={s.pic} src={welpic2} alt="Onboarding two" />
         <div className={s.action}>
           <div className={s.descript}>
