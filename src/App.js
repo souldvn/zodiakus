@@ -5,6 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './componensts/Welcome/Welcome';
 import Weltwo from './componensts/Weltwo/Weltwo';
 import Welthree from './componensts/Welthree/Welthree';
+import Main from './componensts/Main/Main';
+
+
+
 
 
 
@@ -23,16 +27,20 @@ function App() {
   // }
 
 
+
+
   return (
     <div className="App">
-    <Router>
+    {/* <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/zodiakus" element={<Weltwo />} />
         <Route path="/start" element={<Welthree />} />
         
       </Routes>
-    </Router>
+    </Router> */}
+    <Main/>
+
   </div>
   );
 }

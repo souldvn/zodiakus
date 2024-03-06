@@ -1,0 +1,140 @@
+.general{
+    background-image: url(../../img/background.svg);
+    height: 100vh;
+
+}
+
+.grind{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+.points{
+    display: flex;
+    align-items: center;
+}
+
+.star{
+    position: relative;
+}
+
+.stargroup {
+    position: relative;
+    z-index: 1;
+}
+
+.starlevel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.starline{
+    position: absolute;
+    width: 146px;
+    height: 18px;
+    background-color: #575757;
+    border-radius: 20px;
+    transform: translateX(10%);
+
+}
+
+.money{
+    display: block;
+    align-items: center;
+
+}
+
+.coin{
+    padding-right: 112px;   
+    z-index: 2;
+}
+
+.moneygroup{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    
+}
+
+.coinline{
+    position: absolute;
+    width: 146px;
+    height: 18px;
+    background-color: #575757;
+    border-radius: 20px;
+    transform: translateX(10%);
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    align-items: center;
+    line-height: 18px;
+
+
+
+}
+
+.other{
+    display: flex;
+    align-items: center;
+    margin: 24px 16px;
+    justify-content: space-between;
+}
+
+.cookie{
+text-align: center;
+}
+
+.timer{
+    display: block;
+    background-color: #7E46E8;
+    width: 112px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    line-height: 32px;
+    border-radius: 4px;
+}
+
+.profileinfo{
+    display: flex;
+    gap: 15px;
+}
+
+
+.helperimg{
+    position: absolute;
+    right: 0;
+    width: 122px;
+    height: 271px;
+    margin-right: 25px;
+}
+
+.navbar{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: space-around;
+    bottom: 0;
+    border-radius: 25px 25px 0 0;
+}
+
+.navitem{
+    text-align: center;
+    align-items: center;
+    display: none;
+}
+
+.games{
+    text-align: center;
+}
