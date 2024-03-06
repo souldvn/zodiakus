@@ -54,22 +54,22 @@ const Main = () => {
             <img className={s.helperimg} src={helperdefault}/>
         </div>
         <div className={s.navbar}>
-          <div className={`${s.tasks} navitem`}>
+          <div className={`${s.tasks} ${s.navitem}`}>
             <img src={task}/>
             <p>Задания</p>
           </div>
-          <div className={`${s.mainslide} navitem`}>
+          <div className={`${s.mainslide} ${s.navitem}`}>
             <img src={main}/>
             <p>Главная</p>
           </div>
-          <div className={`${s.circle} navitem`}>
+          <div className={`${s.circle} ${s.navitem}`}>
             <img src={circle}/>   
           </div>
-          <div className={`${s.games} navitem`}>
+          <div className={`${s.games} ${s.navitem}`}>
             <img src={games}/>
             <p>Игры</p>
           </div>
-          <div className={`${s.store} navitem`}>
+          <div className={`${s.store} ${s.navitem}`}>
             <img src={store}/>
             <p>Магазин</p>
           </div>
