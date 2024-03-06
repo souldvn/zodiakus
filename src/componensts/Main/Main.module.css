@@ -1,7 +1,7 @@
 .general{
     background-image: url(../../img/background.svg);
     height: 100vh;
-
+    
 }
 
 .grind{
@@ -109,13 +109,18 @@ text-align: center;
     gap: 15px;
 }
 
+.helper{
+    /* float: right;
+    margin-right: 25px; */
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+}
 
 .helperimg{
-    position: absolute;
-    right: 0;
     width: 122px;
     height: 271px;
-    margin-right: 25px;
+    
 }
 
 .navbar{
@@ -128,10 +133,14 @@ text-align: center;
     justify-content: space-around;
     bottom: 0;
     border-radius: 25px 25px 0 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .navitem{
     text-align: center;
     color: black;
+    font-size: 12px;
+    font-weight: 400;
 }
 
