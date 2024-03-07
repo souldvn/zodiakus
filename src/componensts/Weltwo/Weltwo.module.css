@@ -4,17 +4,15 @@
     background-image: url(../../img/background.svg);
     height: 100vh;
 
-    animation: slide_in 0.7s ease-out;
+    animation: slide_in 0.5s ease-out;
 }
 
 @keyframes slide_in {
   0% {
-    transform: translateX(100%);
-
+    transform: rotate(90deg) translateY(-50%) translateX(300%);
   }
   100% {
-    transform: translateX(0%);
-
+    transform: rotate(0deg) translateY(0%) translateX(0%);
   }
 }
 
