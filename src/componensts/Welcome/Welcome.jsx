@@ -28,7 +28,7 @@ const Welcome = () => {
         <div className={s.action}>
           <div className={s.descript}>
             <p className={s.title}>ПОБЕДА БУДЕТ ЗА НАМИ!</p>
-            <p className={s.text}>Добро пожаловать! Здесь вы найдёте персонализированный прогноз для вашего знака зодиака. Узнайте, что звезды говорят о вашем будущем и получите ценные советы для своей жизни.</p>
+            <p className={s.text}>Добро пожаловать! Здесь вы найдёте персонализированный прогноз для вашего знака зодиака. Узнайте, что звезды говорят о вашем будущем.</p>
             </div>
             <div className={s.buttons}>
               <button onClick={() => handleClick('/zodiakus')} className={s.next}>Далее</button>

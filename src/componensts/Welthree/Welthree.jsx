@@ -23,7 +23,7 @@ const handleClick = (path) =>{
         <img className={s.pic} src={welpic3} alt="Onboarding two" />
         <div className={s.action}>
           <div className={s.descript}>
-            <p className={s.title}>Развлекайтесь вместе с нами</p>
+            <p className={s.title}>Развлекайтесь вместе</p>
             <p className={s.text}>Помимо прогнозов у нас есть интересные развлечения. Отличные мини-игры, увлекательные задания и игровой магазин с предметами ждут вас. Присоединяйтесь к нам и наслаждайтесь моментом.</p>
             </div>
             <div className={s.buttons}>
