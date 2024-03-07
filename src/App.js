@@ -31,15 +31,15 @@ function App() {
 
   return (
     <div className="App">
-    {/* <Router>
+    <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/zodiakus" element={<Weltwo />} />
         <Route path="/start" element={<Welthree />} />
-        
+        <Route path="/main" element={<Main/>}/>
       </Routes>
-    </Router> */}
-    <Main/>
+    </Router>
+    
 
   </div>
   );

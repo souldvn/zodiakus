@@ -3,7 +3,7 @@
     flex-direction: column;
     background-image: url(../../img/background.svg);
     height: 100vh;
-    animation: slide_in 0.7s ease-out;
+    animation: slide_in 0.5s ease-out;
 }
 
 @keyframes slide_in {

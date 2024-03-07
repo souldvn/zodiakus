@@ -14,11 +14,8 @@ const Weltwo = () => {
     if (path === '/start'){
       navigate('/start')
       setIsMainOut(true);
-
-      setTimeout(() => {
-        setIsMainOut(false);
-    }, 500);
-
+    }  if(path === '/main'){
+      navigate('/main')
     }
   }
   
@@ -35,7 +32,7 @@ const Weltwo = () => {
             </div>
             <div className={s.buttons}>
               <button onClick={() => handleClick('/start')} className={s.next}>Далее</button>
-              <button className={s.skip}>Пропустить</button>
+              <button onClick={() => handleClick('/main')} className={s.skip}>Пропустить</button>
             </div>
           
             

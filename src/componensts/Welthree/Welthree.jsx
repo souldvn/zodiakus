@@ -1,10 +1,23 @@
 import React from 'react'
 import s from './Welthree.module.css'
+import { useNavigate } from 'react-router-dom';
 
 
 import welpic3 from '../../img/Onboardingthree.svg'
 
+
+
 const Welthree = () => {
+
+  const navigate = useNavigate()
+
+const handleClick = (path) =>{
+  if(path === '/main'){
+    navigate('/main')
+  }
+}
+
+
   return (
     <div className={s.main}>
         <img className={s.pic} src={welpic3} alt="Onboarding two" />
@@ -15,7 +28,7 @@ const Welthree = () => {
             </div>
             <div className={s.buttons}>
             <div className={s.skip}></div>
-              <button className={s.next}>Далее</button>           
+              <button onClick={() => handleClick('/main')} className={s.next}>Далее</button>           
             </div>
           
             

@@ -13,6 +13,9 @@ const Welcome = () => {
     if (path === '/zodiakus'){
       navigate('/zodiakus')
     }
+    if(path === '/main'){
+      navigate('/main')
+    }
   }
 
 
@@ -29,7 +32,7 @@ const Welcome = () => {
             </div>
             <div className={s.buttons}>
               <button onClick={() => handleClick('/zodiakus')} className={s.next}>Далее</button>
-              <button className={s.skip}>Пропустить</button>
+              <button onClick={() => handleClick('/main')} className={s.skip}>Пропустить</button>
             </div>
           
             
