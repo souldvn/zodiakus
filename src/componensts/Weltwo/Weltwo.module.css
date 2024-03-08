@@ -88,6 +88,11 @@
     font-size: 16px;
     border-radius: 20px;
     height: 55px;
+    transition: all 0.1s;
+}
+
+.next:hover{
+   background-color: #6232B8;
 }
 
 .skip{
