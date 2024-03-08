@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from './Welcome.module.css';
-import welpic1 from '../../img/Onboardingone.svg';
+import welpic1 from '../../img/Onone.svg';
 import { useSwipeable } from 'react-swipeable';
 
 

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 
 
-import welpic3 from '../../img/Onboardingthree.svg'
+import welpic3 from '../../img/Onthree.svg'
 
 
 
