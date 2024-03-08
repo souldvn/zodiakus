@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import s from './Weltwo.module.css'
 import { useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 
 
 import welpic2 from '../../img/Onboardingtwo.svg'
-import Welcome from '../Welcome/Welcome';
+
 
 const Weltwo = () => {
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleClick('/start'),
+  });
 
     const navigate = useNavigate()
     const [isMainOut, setIsMainOut] = useState(false);
@@ -24,7 +29,8 @@ const Weltwo = () => {
 
 
   return (
-    <div className={`${s.main_two} ${isMainOut ? s.main_out : ''}`}>
+    <div {...handlers}>
+    <div className={s.main_two}>
         <img className={s.pic} src={welpic2} alt="Onboarding two" />
         <div className={s.action}>
           <div className={s.descript}>
@@ -38,6 +44,7 @@ const Weltwo = () => {
           
             
         </div>
+    </div>
     </div>
   )
 }

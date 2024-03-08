@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './Welthree.module.css'
 import { useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 
 
 import welpic3 from '../../img/Onboardingthree.svg'
@@ -8,6 +9,10 @@ import welpic3 from '../../img/Onboardingthree.svg'
 
 
 const Welthree = () => {
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleClick('/main'),
+  });
 
   const navigate = useNavigate()
 
@@ -19,6 +24,7 @@ const handleClick = (path) =>{
 
 
   return (
+    <div {...handlers}>
     <div className={s.main}>
         <img className={s.pic} src={welpic3} alt="Onboarding two" />
         <div className={s.action}>
@@ -33,6 +39,7 @@ const handleClick = (path) =>{
           
             
         </div>
+    </div>
     </div>
   )
 }
