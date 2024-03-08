@@ -3,13 +3,14 @@
     flex-direction: column;
     background-image: url(../../img/background.svg);
     height: 100vh;
+    width: 100%;
 }
 
 .pic{
     display: block;
-    position: absolute;
+    /* position: absolute; */
     width: 90%;
-    margin: 16px;
+    margin: 16px auto;
 }
 
 .action{
@@ -22,6 +23,7 @@
     min-width: 364px;
     bottom: 0;
     padding: 18px 14px;
+    width: 100%;
 }
 
 .descript{

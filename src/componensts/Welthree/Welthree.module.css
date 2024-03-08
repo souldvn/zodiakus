@@ -17,9 +17,9 @@
 
 .pic{
     display: block;
-    position: absolute;
+    /* position: absolute; */
     width: 90%;
-    margin: 16px;
+    margin: 16px auto;
 }
 
 .action{
