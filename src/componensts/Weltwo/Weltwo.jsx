@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import welpic2 from '../../img/Onboardingtwo.svg'
+import Welcome from '../Welcome/Welcome';
 
 const Weltwo = () => {
 
@@ -23,7 +24,7 @@ const Weltwo = () => {
 
 
   return (
-    <div className={`${s.main} ${isMainOut ? s.main_out : ''}`}>
+    <div className={`${s.main_two} ${isMainOut ? s.main_out : ''}`}>
         <img className={s.pic} src={welpic2} alt="Onboarding two" />
         <div className={s.action}>
           <div className={s.descript}>

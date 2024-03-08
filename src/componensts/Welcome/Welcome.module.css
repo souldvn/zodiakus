@@ -6,6 +6,20 @@
     width: 100%;
 }
 
+.swipper{
+    animation: swipe 0.5s ease-out;
+}
+
+@keyframes swipe {
+    0% {
+      transform: rotate(0deg) translateY(0%) translateX(0%);
+    }
+    100% {
+      transform: rotate(90deg) translateY(-50%) translateX(300%);
+    }
+  }
+
+
 .pic{
     display: block;
     /* position: absolute; */

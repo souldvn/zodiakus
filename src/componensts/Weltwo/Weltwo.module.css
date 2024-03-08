@@ -1,4 +1,4 @@
-.main{
+.main_two{
     display: flex;
     flex-direction: column;
     background-image: url(../../img/background.svg);
@@ -28,6 +28,10 @@
       transform: translateX(-100%);
     }
   }
+
+
+
+
 
 
 .pic{
