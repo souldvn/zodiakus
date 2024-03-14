@@ -3,8 +3,6 @@ import { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './componensts/Welcome/Welcome';
-import Weltwo from './componensts/Weltwo/Weltwo';
-import Welthree from './componensts/Welthree/Welthree';
 import Main from './componensts/Main/Main';
 
 
@@ -34,8 +32,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/zodiakus" element={<Weltwo />} />
-        <Route path="/start" element={<Welthree />} />
         <Route path="/main" element={<Main/>}/>
       </Routes>
     </Router>

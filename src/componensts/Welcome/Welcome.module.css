@@ -10,22 +10,46 @@
     animation: swipe 0.5s ease-out;
 }
 
-@keyframes swipe {
-    0% {
-      transform: rotate(0deg) translateY(0%) translateX(0%);
-    }
-    100% {
-      transform: rotate(90deg) translateY(-50%) translateX(300%);
-    }
-  }
 
 
 .pic{
     display: block;
-    /* position: absolute; */
     width: 90%;
     margin: 16px auto;
 }
+
+.pictwo{
+    display: block;
+    width: 90%;
+    margin: 16px auto;
+    animation: slide 0.35s ease-out;
+}
+
+.picthree{
+    display: block;
+    width: 90%;
+    margin: 16px auto;
+    animation: out 0.35s ease-out;
+}
+
+@keyframes slide{
+    0% {
+        transform: rotate(90deg) translateY(-50%) translateX(300%);
+    }
+    100%{
+        transform: rotate(0deg) translateY(0%) translateX(0%);
+    }
+}
+
+@keyframes out{
+    0% {
+        transform: rotate(90deg) translateY(-50%) translateX(300%);
+    }
+    100%{
+        transform: rotate(0deg) translateY(0%) translateX(0%);
+    }
+}
+
 
 .action{
     display: flex;
