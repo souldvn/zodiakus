@@ -25,7 +25,7 @@ const Naming = () => {
   const handleNextClick = () => {
     if (isValid) {
       setButtonClicked(true);
-      navigate('/main');
+      navigate('/gender');
     }
   }
 

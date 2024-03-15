@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './componensts/Welcome/Welcome';
 import Main from './componensts/Main/Main';
 import Naming from './componensts/Naming/Naming';
+import Profile from './componensts/Profile/Profile';
+import Male from './componensts/Male/Male';
 
 
 
@@ -35,8 +37,10 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/main" element={<Main/>}/>
         <Route path = "/naming" element = {<Naming/>}/>
+        <Route path='gender' element = {<Male/>}/>
       </Routes>
     </Router>
+    
     
     
 
