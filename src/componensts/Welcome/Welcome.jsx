@@ -91,7 +91,7 @@ const Welcome = () => {
           </div>
           <div className={s.buttons}>
             <button onClick={handleNext} className={s.next}>Далее</button>
-            <button onClick={() => handleClick('/main')} className={s.skip}>Пропустить</button>
+            <button onClick={() => handleClick('/naming')} className={s.skip}>Пропустить</button>
           </div>
         </div>
       </div>
