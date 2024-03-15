@@ -29,7 +29,7 @@
     display: block;
     width: 90%;
     margin: 16px auto;
-    animation: out 0.35s ease-out;
+    animation: out 0.5s ease-out;
 }
 
 @keyframes slide{

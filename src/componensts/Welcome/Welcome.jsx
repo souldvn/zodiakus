@@ -55,7 +55,15 @@ const Welcome = () => {
     }else if (welcomeDesc === secondDesc) {
       handlePage('three');
     } else if (welcomeDesc === thirdDesc){
-      navigate('/main')
+      navigate('/naming')
+    }
+  }
+
+  const handleBack = () =>{
+    if (welcomeDesc === thirdDesc){
+      handlePage('two');
+    }else if (welcomeDesc === secondDesc) {
+      handlePage('one')
     }
   }
 
@@ -65,6 +73,9 @@ const Welcome = () => {
     
     onSwipedLeft: () => {
       handleNext()
+    },
+    onSwipedRight: () => {
+      handleBack();
     }
 
   });
