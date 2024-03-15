@@ -28,8 +28,8 @@ const Welcome = () => {
   
 
   const handleClick = (path) => {
-    if (path === '/main') {
-      navigate('/main');
+    if (path === '/naming') {
+      navigate('/naming');
     }
   };
 
