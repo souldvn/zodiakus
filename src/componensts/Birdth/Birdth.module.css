@@ -29,6 +29,7 @@
     border-width: 1px;
     opacity: 60%;
     padding: 16px;
+    outline: none;
 }
 
 .next{
