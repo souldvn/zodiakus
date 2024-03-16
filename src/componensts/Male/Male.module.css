@@ -46,6 +46,7 @@
     height: 56px;
     border: none;
     border-radius: 20px;
+   
 }
 
 .active {
@@ -56,6 +57,7 @@
     border: none;
     border-radius: 20px;
     background-color: #7E46E8;
+    
 }
 
 
