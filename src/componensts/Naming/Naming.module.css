@@ -35,10 +35,12 @@
 .next{
     position: absolute;
     bottom: 24px;
-    width: 100%;
+    
     height: 56px;
     border: none;
     border-radius: 20px;
+    right: 16px;
+    left: 16px;
 }
 
 
@@ -59,9 +61,10 @@
     color: white;
     position: absolute;
     bottom: 24px;
-    width: 100%;
     height: 56px;
     border: none;
     border-radius: 20px;
+    right: 16px;
+    left: 16px;
   }
   

@@ -1,0 +1,42 @@
+.birdth{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.action{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(50%);
+    transform: translateY(40%);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.date{
+    width: 328px;
+    height: 56px;
+    border-radius: 20px;
+    border-color: 08091C;
+    border-width: 1px;
+    opacity: 60%;
+    padding: 16px;
+}
+
+.next{
+    position: absolute;
+    bottom: 24px;
+    height: 56px;
+    border: none;
+    border-radius: 20px;
+    right: 16px;
+    left: 16px;
+}

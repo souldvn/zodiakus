@@ -14,7 +14,7 @@ const Male = () => {
     const navigate = useNavigate()
 
     const onNextPage = () =>{
-        navigate ('/main')
+        navigate ('/date')
     }
 
     return (
