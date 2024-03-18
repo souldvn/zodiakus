@@ -2,20 +2,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 24px;
 }
 
 
 .choose{
     
     display: block;
-    align-items: center;
     padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    overflow: scroll;
-    background:  white;
-    height: 100%;
 
 }
 
