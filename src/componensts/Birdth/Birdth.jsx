@@ -2,17 +2,23 @@ import React, { useState } from 'react'
 import s from './Birdth.module.css'
 import { useNavigate } from 'react-router-dom'
 
-const Birdth = () => {
+const Birdth = ({ setBirthDate }) => {
   const [dateValue, setDateValue] = useState('')
+
+  
+
 
   const handleDateChange = (e) => {
     setDateValue(e.target.value)
   }
 
+  
+
   const navigate = useNavigate()
 
   const handleNextClick = () => {
     if (dateValue)
+    setBirthDate(dateValue);
     navigate('/loading')
   }
 

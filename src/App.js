@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './componensts/Welcome/Welcome';
@@ -9,6 +9,7 @@ import Profile from './componensts/Profile/Profile';
 import Male from './componensts/Male/Male';
 import Birdth from './componensts/Birdth/Birdth';
 import Loading from './componensts/Loading/Loading';
+import YourSign from './componensts/YourSign/YourSign';
 
 
 
@@ -21,15 +22,7 @@ const tg = window.Telegram.WebApp
 
 function App() {
 
-  // useEffect (() =>{
-  //   tg.ready()
-  // }, [])
-
-  // const onClose = () =>{
-  //   tg.close()
-  // }
-
-
+  const [birthDate, setBirthDate] = useState('');
 
 
   return (
@@ -39,12 +32,13 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/main" element={<Main/>}/>
         <Route path = "/naming" element = {<Naming/>}/>
-        <Route path='gender' element = {<Male/>}/>
-        <Route path = 'date' element = {<Birdth/>}/>
-        <Route path = 'loading' element = {<Loading/>}/>
-
+        <Route path='/gender' element = {<Male/>}/>
+        <Route path = '/date' element={<Birdth setBirthDate={setBirthDate} />}/>   
+        <Route path = '/sign' element={<YourSign birthDate={birthDate} />}/>
+        <Route path = '/loading' element = {<Loading/>}/>
       </Routes>
     </Router>
+
 
     {/* <Loading/> */}
     

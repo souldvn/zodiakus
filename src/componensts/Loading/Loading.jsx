@@ -1,4 +1,4 @@
-// Loading.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from './Loading.module.css';
@@ -18,7 +18,8 @@ const Loading = () => {
 
         setTimeout(() => {
             clearInterval(interval);
-            navigate('/main');
+            
+            navigate('/sign');
         }, 5000);
 
         return () => {

@@ -23,6 +23,10 @@
     font-weight: 700;
 }
 
+.action p{
+    color: black;
+}
+
 .date{
     width: 328px;
     height: 56px;
@@ -42,5 +46,6 @@
     border-radius: 20px;
     right: 16px;
     left: 16px;
+    color: white;
 }
 
