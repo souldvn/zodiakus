@@ -13,7 +13,7 @@ const Birdth = () => {
 
   const handleNextClick = () => {
     if (dateValue)
-    navigate('/main')
+    navigate('/loading')
   }
 
   return (

@@ -8,6 +8,7 @@ import Naming from './componensts/Naming/Naming';
 import Profile from './componensts/Profile/Profile';
 import Male from './componensts/Male/Male';
 import Birdth from './componensts/Birdth/Birdth';
+import Loading from './componensts/Loading/Loading';
 
 
 
@@ -40,8 +41,12 @@ function App() {
         <Route path = "/naming" element = {<Naming/>}/>
         <Route path='gender' element = {<Male/>}/>
         <Route path = 'date' element = {<Birdth/>}/>
+        <Route path = 'loading' element = {<Loading/>}/>
+
       </Routes>
     </Router>
+
+    {/* <Loading/> */}
     
     
     

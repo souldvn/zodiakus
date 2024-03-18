@@ -1,0 +1,56 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    transform: translateX(50%);
+    transform: translateY(40%);
+  }
+  
+  .flex {
+    min-height: 60pt;
+    height: 20%;
+  }
+  
+  @keyframes loading {
+    0% {
+      width: 70pt;
+      height: 70pt;
+      margin-top: 0;
+    }
+    25% {
+      height: 10pt;
+      margin-top: 43pt;
+    }
+    50% {
+      width: 8pt;
+    }
+    75% {
+      width: 60pt;
+    }
+    100% {
+      width: 70pt;
+      height: 70pt;
+      margin-top: 0;
+    }
+  }
+  
+  .loader {
+    width: 50pt;
+    height: 50pt;
+    border-radius: 100%;
+    border: #6767fa 4pt solid;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    animation: loading 1s infinite;
+  }
+  
+.text{
+    
+    text-align: center;
+}
