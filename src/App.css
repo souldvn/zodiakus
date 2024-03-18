@@ -6,8 +6,9 @@
 }
 
 body{
-  /* background: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color); */
+   /* background: var(--tg-theme-bg-color); */
+   background: white;
+  color: var(--tg-theme-text-color); 
 }
 
 html, body {
