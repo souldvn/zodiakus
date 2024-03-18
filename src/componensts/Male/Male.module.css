@@ -13,11 +13,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vv;
     align-items: center;
     text-align: center;
     transform: translateX(50%);
-    transform: translateY(30%);
+    transform: translateY(100%);
     font-size: 24px;
     font-weight: 700;
 }
@@ -68,8 +68,12 @@
     color: white;
     right: 16px;
     left: 16px;
-    
+    transition: all 0.1s;
 }
+
+.active:hover{
+    background-color: #6232B8;
+ }
 
 
 

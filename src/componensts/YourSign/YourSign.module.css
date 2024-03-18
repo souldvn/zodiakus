@@ -1,5 +1,6 @@
 .main{
-    
+    overflow: hidden;
+    max-height: 100vh;
 }
 
 .info{
@@ -7,10 +8,10 @@
     top: 0;
     left: 0;
     transform: translateX(50%);
-    transform: translateY(20%);
+    transform: translateY(50%);
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: 100vv;
 }
 .info p{
     color: black;

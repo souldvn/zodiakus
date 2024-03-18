@@ -10,7 +10,7 @@
     
     display: block;
     padding: 24px 16px;
-
+    /* overflow-y: visible; */
 }
 
 .choose img{

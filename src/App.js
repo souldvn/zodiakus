@@ -13,17 +13,17 @@ import YourSign from './componensts/YourSign/YourSign';
 import Choose from './componensts/YourSign/Choose/Choose';
 
 
-
-
-
-
-
 const tg = window.Telegram.WebApp
 
 
 function App() {
 
   const [birthDate, setBirthDate] = useState('');
+  const [signImage, setSignImage] = useState(null);
+
+  const handleSetSign = (newSignImage) => {
+    setSignImage(newSignImage);
+  }
 
 
   return (
@@ -35,21 +35,12 @@ function App() {
         <Route path = "/naming" element = {<Naming/>}/>
         <Route path='/gender' element = {<Male/>}/>
         <Route path = '/date' element={<Birdth setBirthDate={setBirthDate} />}/>   
-        <Route path = '/sign' element={<YourSign birthDate={birthDate} />}/>
+        <Route path = '/sign' element={<YourSign birthDate={birthDate} setSign={handleSetSign} />}/>
         <Route path = '/loading' element = {<Loading/>}/>
-        <Route path = '/choose' element = {<Choose/>}/>
+        <Route path = '/choose' element = {<Choose setSign={handleSetSign}/>}/>
 
       </Routes>
     </Router>
-
-
-
-    
-    
-    
-    
-    
-
   </div>
   );
 }
