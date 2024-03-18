@@ -4,6 +4,7 @@
     /* position: relative; */
     background:  white;
     height: 100%;
+
 }
 
 .setName{
@@ -21,11 +22,18 @@
     transform: translateY(40%);
     font-size: 24px;
     font-weight: 700;
+    padding-inline: 16px;
     
 }
 
+.setName p:first-child{
+    color: black;
+}
+
 .setName input{
-        width: 328px;
+        /* width: 328px; */
+        width: 100%;
+        
         height: 56px;
         border-color: 08091C;
         opacity: 60%;
@@ -43,6 +51,7 @@
     border-radius: 20px;
     right: 16px;
     left: 16px;
+    
 }
 
 

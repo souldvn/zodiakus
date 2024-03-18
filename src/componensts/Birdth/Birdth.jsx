@@ -20,7 +20,7 @@ const Birdth = () => {
     <div className={s.birdth}>
         <div className={s.action}>
             <p>Укажите дату рождения</p>
-            <input className={s.date} type='date'  onChange={handleDateChange} />
+            <input className={s.date} type='date' inputMode='numeric'  onChange={handleDateChange} />
         </div>
         <button className={s.next} style={{backgroundColor: dateValue ? '#7E46E8' : ''}} onClick={handleNextClick}>Далее</button>
     </div>

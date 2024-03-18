@@ -22,6 +22,11 @@
     font-weight: 700;
 }
 
+.choose p{
+    color: black;
+    
+}
+
 .icon {
     display: flex;
     width: 100%;
@@ -60,6 +65,7 @@
     border: none;
     border-radius: 20px;
     background-color: #7E46E8;
+    color: white;
     right: 16px;
     left: 16px;
     
