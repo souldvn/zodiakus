@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import s from './YourSign.module.css';
 import aries from '../../sings/oven.svg';
 import taurus from '../../sings/telec.svg';
@@ -12,6 +13,7 @@ import sagittarius from '../../sings/strelec.svg';
 import capricorn from '../../sings/kozerog.svg';
 import aquarius from '../../sings/vodoley.svg';
 import pisces from '../../sings/ryby.svg';
+
 
 const getSign = (month, day) => {
   if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
@@ -47,6 +49,12 @@ const YourSign = ({ birthDate }) => {
   const day = parseInt(dateParts[2]);
   const signImage = getSign(month, day);
 
+  const navigate = useNavigate()
+
+  const onChoose = () =>{
+    navigate('/choose')
+  }
+
   return (
     <div className={s.main}>
       <div className={s.info}>
@@ -55,7 +63,7 @@ const YourSign = ({ birthDate }) => {
       </div>
       <div className={s.buttons}>
             <button className={s.next}>Далее</button>
-            <button className={s.skip}>Выбрать вручную</button>
+            <button onClick={onChoose} className={s.skip}>Выбрать вручную</button>
           </div>
     </div>
   );

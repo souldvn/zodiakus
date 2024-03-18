@@ -1,0 +1,22 @@
+.sector{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.choose{
+    
+    display: block;
+    align-items: center;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: scroll;
+
+}
+
+.choose img{
+    width: 160px;
+}

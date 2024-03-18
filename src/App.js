@@ -10,6 +10,7 @@ import Male from './componensts/Male/Male';
 import Birdth from './componensts/Birdth/Birdth';
 import Loading from './componensts/Loading/Loading';
 import YourSign from './componensts/YourSign/YourSign';
+import Choose from './componensts/YourSign/Choose/Choose';
 
 
 
@@ -36,11 +37,14 @@ function App() {
         <Route path = '/date' element={<Birdth setBirthDate={setBirthDate} />}/>   
         <Route path = '/sign' element={<YourSign birthDate={birthDate} />}/>
         <Route path = '/loading' element = {<Loading/>}/>
+        <Route path = '/choose' element = {<Choose/>}/>
+
       </Routes>
     </Router>
 
 
-    {/* <Loading/> */}
+
+    
     
     
     
