@@ -43,7 +43,7 @@ const getSign = (month, day) => {
   }
 };
 
-const YourSign = ({ birthDate, setSign }) => {
+const YourSign = ({ birthDate}) => {
   const dateParts = birthDate.split('-');
   const month = parseInt(dateParts[1]);
   const day = parseInt(dateParts[2]);
@@ -55,14 +55,18 @@ const YourSign = ({ birthDate, setSign }) => {
     navigate('/choose')
   }
 
+  const onNext = () =>{
+    navigate('/main')
+  }
+
   return (
     <div className={s.main}>
       <div className={s.info}>
         <p>Ваш знак зодиака</p>
-        {signImage && <img src={signImage} alt="Sign" />}
+        <img src={signImage} alt="Sign" />
       </div>
       <div className={s.buttons}>
-            <button className={s.next}>Далее</button>
+            <button onClick={onNext} className={s.next}>Далее</button>
             <button onClick={onChoose} className={s.skip}>Выбрать вручную</button>
           </div>
     </div>

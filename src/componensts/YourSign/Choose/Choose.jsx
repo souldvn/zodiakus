@@ -15,9 +15,10 @@ import capricorn from '../../../sings/kozerog.svg';
 import aquarius from '../../../sings/vodoley.svg';
 import pisces from '../../../sings/ryby.svg';
 
-const Choose = ({setSign}) => {
+const Choose = () => {
 
     const navigate = useNavigate()
+    const [selectedId, setSelectedId] = useState(null);
 
     const [loading, setLoading] = useState(true);
     
@@ -31,9 +32,9 @@ const Choose = ({setSign}) => {
     }, []);
 
 
-    const onChangePic = (imageId) => {
-        setSign(imageId);
-        navigate('/sign')
+    const onChangePic = (id) => {
+        setSelectedId(id);
+        navigate(`/newSign/${id}`);
     }
 
 
@@ -49,28 +50,28 @@ const Choose = ({setSign}) => {
             </div>
             <div style={{ display: loading ? 'none' : 'block' }}>
                 <div className={s.sector}>
-                    <img id={aries} onClick={onChangePic} src={aries} alt="aries" />
-                    <img id={taurus} onClick={onChangePic} src={taurus} alt="taurus" />
+                    <img id={1} onClick={() => onChangePic(1)} src={aries} alt="aries" />
+                    <img id={2} onClick={() => onChangePic(2)} src={taurus} alt="taurus" />
                 </div>
                 <div className={s.sector}>
-                    <img id={gemini} onClick={onChangePic} src={gemini} alt="gemini" />
-                    <img id={cancer} onClick={onChangePic} src={cancer} alt="cancer" />
+                    <img id={3} onClick={() => onChangePic(3)} src={gemini} alt="gemini" />
+                    <img id={4} onClick={() => onChangePic(4)} src={cancer} alt="cancer" />
                 </div>
                 <div className={s.sector}>
-                    <img id={leo} onClick={onChangePic} src={leo} alt="leo" />
-                    <img id={virgo} onClick={onChangePic} src={virgo} alt="virgo" />
+                    <img id={5} onClick={() => onChangePic(5)} src={leo} alt="leo" />
+                    <img id={6} onClick={() => onChangePic(6)} src={virgo} alt="virgo" />
                 </div>
                 <div className={s.sector}>
-                    <img id={libra} onClick={onChangePic} src={libra} alt="libra" />
-                    <img id={scorpio} onClick={onChangePic} src={scorpio} alt="scorpio" />
+                    <img id={7} onClick={() => onChangePic(7)} src={libra} alt="libra" />
+                    <img id={8} onClick={() => onChangePic(8)} src={scorpio} alt="scorpio" />
                 </div>
                 <div className={s.sector}>
-                    <img id={sagittarius} onClick={onChangePic} src={sagittarius} alt="sagittarius" />
-                    <img id={capricorn} onClick={onChangePic} src={capricorn} alt="capricorn" />
+                    <img id={9} onClick={() => onChangePic(9)} src={sagittarius} alt="sagittarius" />
+                    <img id={10} onClick={() => onChangePic(10)} src={capricorn} alt="capricorn" />
                 </div>
                 <div className={s.sector}>
-                    <img id={aquarius} onClick={onChangePic} src={aquarius} alt="aquarius" />
-                    <img id={pisces} onClick={onChangePic} src={pisces} alt="pisces" />
+                    <img id={11} onClick={() => onChangePic(11)} src={aquarius} alt="aquarius" />
+                    <img id={12} onClick={() => onChangePic(12)} src={pisces} alt="pisces" />
                 </div>
             </div>
         </div>

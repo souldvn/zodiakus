@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -11,6 +10,7 @@ import Birdth from './componensts/Birdth/Birdth';
 import Loading from './componensts/Loading/Loading';
 import YourSign from './componensts/YourSign/YourSign';
 import Choose from './componensts/YourSign/Choose/Choose';
+import NewSign from './componensts/YourSign/NewSign'
 
 
 const tg = window.Telegram.WebApp
@@ -19,11 +19,7 @@ const tg = window.Telegram.WebApp
 function App() {
 
   const [birthDate, setBirthDate] = useState('');
-  const [signImage, setSignImage] = useState(null);
 
-  const handleSetSign = (newSignImage) => {
-    setSignImage(newSignImage);
-  }
 
 
   return (
@@ -35,9 +31,14 @@ function App() {
         <Route path = "/naming" element = {<Naming/>}/>
         <Route path='/gender' element = {<Male/>}/>
         <Route path = '/date' element={<Birdth setBirthDate={setBirthDate} />}/>   
-        <Route path = '/sign' element={<YourSign birthDate={birthDate} setSign={handleSetSign} />}/>
+        
+
+
         <Route path = '/loading' element = {<Loading/>}/>
-        <Route path = '/choose' element = {<Choose setSign={handleSetSign}/>}/>
+
+        <Route path = '/sign' element={<YourSign birthDate={birthDate}/>}/>
+        <Route path = '/choose' element = {<Choose/>}/>
+        <Route path="/newSign/:id" element={<NewSign />} />
 
       </Routes>
     </Router>
