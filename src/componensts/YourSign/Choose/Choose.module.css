@@ -14,9 +14,16 @@
     flex-direction: column;
     gap: 24px;
     overflow: scroll;
+    background:  white;
+    height: 100%;
 
 }
 
 .choose img{
     width: 160px;
 }
+
+
+
+
+
