@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import s from './Choose.module.css'
-import st from '../../Loading/Loading.module.css'
+import s from './Choose.module.css';
+import st from '../../Loading/Loading.module.css';
 import aries from '../../../sings/oven.svg';
 import taurus from '../../../sings/telec.svg';
 import gemini from '../../../sings/bliz.svg';
@@ -21,15 +21,11 @@ const Choose = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
           setLoading(false);
-        }, 3000);
+        }, 4000);
         
         return () => clearTimeout(timer);
       }, []);
       
-
-
-
-
       return (
         <div className={s.choose}>
           {loading ? (
@@ -43,28 +39,28 @@ const Choose = () => {
           ) : (
             <>
               <div className={s.sector}>
-                <img src={aries}/>
-                <img src={taurus}/>
+                <img src={aries} alt="aries" />
+                <img src={taurus} alt="taurus" />
               </div>
               <div className={s.sector}>
-                <img src={gemini}/>
-                <img src={cancer}/>
+                <img src={gemini} alt="gemini" />
+                <img src={cancer} alt="cancer" />
               </div>
               <div className={s.sector}>
-                <img src={leo}/>
-                <img src={virgo}/>
+                <img src={leo} alt="leo" />
+                <img src={virgo} alt="virgo" />
               </div>
               <div className={s.sector}>
-                <img src={libra}/>
-                <img src={scorpio}/>
+                <img src={libra} alt="libra" />
+                <img src={scorpio} alt="scorpio" />
               </div>
               <div className={s.sector}>
-                <img src={sagittarius}/>
-                <img src={capricorn}/>
+                <img src={sagittarius} alt="sagittarius" />
+                <img src={capricorn} alt="capricorn" />
               </div>
               <div className={s.sector}>
-                <img src={aquarius}/>
-                <img src={pisces}/>
+                <img src={aquarius} alt="aquarius" />
+                <img src={pisces} alt="pisces" />
               </div>
             </>
           )}
@@ -72,4 +68,4 @@ const Choose = () => {
       );
 }
 
-export default Choose
+export default Choose;
