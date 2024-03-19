@@ -13,12 +13,14 @@ import Choose from './componensts/YourSign/Choose/Choose';
 import NewSign from './componensts/YourSign/NewSign'
 
 
+
 const tg = window.Telegram.WebApp
 
 
 function App() {
 
   const [birthDate, setBirthDate] = useState('');
+  const [nameClient, setnameValueClient] = useState('')
 
 
 
@@ -28,7 +30,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/main" element={<Main/>}/>
-        <Route path = "/naming" element = {<Naming/>}/>
+        <Route path="/profile" element={<Profile nameClient={nameClient} birthDate={birthDate}/>}/>
+
+        <Route path = "/naming" element = {<Naming setnameValueClient={setnameValueClient}/>}/>
         <Route path='/gender' element = {<Male/>}/>
         <Route path = '/date' element={<Birdth setBirthDate={setBirthDate} />}/>   
         
@@ -42,6 +46,7 @@ function App() {
 
       </Routes>
     </Router>
+
   </div>
   );
 }

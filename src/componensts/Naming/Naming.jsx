@@ -2,15 +2,21 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import s from './Naming.module.css'
 
-const Naming = () => {
+const Naming = ({setnameValueClient}) => {
   const [name, setName] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
 
+  const [nameValue, setnameValue] = useState('')
+
+
+
   const handleChange = (e) => {
+    const value = (e.target.value)
     setName(e.target.value);
+    setnameValue (value)
     setIsValid(e.target.value.length >= 3 && e.target.value.length <= 10);
   }
 
@@ -25,7 +31,9 @@ const Naming = () => {
   const handleNextClick = () => {
     if (isValid) {
       setButtonClicked(true);
+      setnameValueClient(nameValue)
       navigate('/gender');
+
     }
   }
 

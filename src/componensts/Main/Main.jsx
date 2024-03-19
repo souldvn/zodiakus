@@ -16,7 +16,22 @@ import helperidea from '../../img/helperidea.svg'
 
 
 
+import { useNavigate } from 'react-router-dom'
+
+
+
 const Main = () => {
+
+  const navigate = useNavigate()
+
+
+  const onOpenProfile = () =>{
+    navigate('/profile')
+  }
+
+
+
+
   return (
     <div className={s.general}>
       <div className={s.grind}>
@@ -44,7 +59,7 @@ const Main = () => {
           </div>
         </div>
         <div className={s.profileinfo}>
-          <img src={man}/>
+          <img onClick={onOpenProfile} src={man}/>
           <img src={invent}/>
 
         </div>
