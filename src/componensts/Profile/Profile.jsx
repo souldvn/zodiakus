@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import s from './Profile.module.css'
 import close from '../../icons/close.svg'
 import man from '../../icons/genMan.svg'
@@ -22,22 +22,36 @@ import pisces from '../../sings/ryby.svg';
 
 const Profile = ({nameClient, birthDate}) => {
 
-    const [nickClient, setNickClient] = useState(nameClient); // Используем useState для хранения текущего никнейма
-    const [newNickName, setNewNickName] = useState(''); // Добавляем состояние для нового никнейма
+    const [nickClient, setNickClient] = useState(nameClient);
+    const [newNickName, setNewNickName] = useState('');
+
+    useEffect(() => {
+        const storedName = localStorage.getItem('nickname');
+        if (storedName) {
+            setNickClient(storedName);
+        }
+    }, []);
 
     const onChangeName = () => {
         if (newNickName.length >= 3 && newNickName.length <= 15) {
-            setNickClient(newNickName); // Устанавливаем новый никнейм, если он удовлетворяет условиям
+            setNickClient(newNickName);
+            localStorage.setItem('nickname', newNickName); // Сохраняем новый никнейм в локальное хранилище
         }
     };
 
     const formattedBirthDate = birthDate ? new Date(birthDate).toLocaleDateString('en-GB') : '';
 
+    const navigate = useNavigate()
+    const onClose = () =>{
+        
+        navigate('/main') 
+    }
+
   return (
     <div className={s.profile}>
         <div className={s.top}>
             <p>Профиль</p>
-            <img src={close}></img>
+            <img onClick={onClose} src={close}></img>
             
         </div>
         <div className={s.profileInfo}>
