@@ -20,10 +20,18 @@ import capricorn from '../../sings/kozerog.svg';
 import aquarius from '../../sings/vodoley.svg';
 import pisces from '../../sings/ryby.svg';
 
-const Profile = ({nameClient, birthDate}) => {
+const Profile = ({nameClient, birthDate, gender}) => {
 
     const [nickClient, setNickClient] = useState(nameClient);
     const [newNickName, setNewNickName] = useState('');
+
+    const sex = () =>{
+        if(gender === 'malec'){
+            return <img src={man}/>
+        } else {
+            return <img src={woman}/>
+        }
+    }
 
     useEffect(() => {
         const storedName = localStorage.getItem('nickname');
@@ -57,7 +65,9 @@ const Profile = ({nameClient, birthDate}) => {
         <div className={s.profileInfo}>
             <p>Информация о пользователе</p>
             <div className={s.progress}>
-                <img src={man}/>
+
+                {sex()}
+
                 <div className={s.grind}>
                     <div className={s.points}>
                     <div className={s.stargroup}>

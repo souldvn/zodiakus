@@ -17,7 +17,7 @@ const Naming = ({setnameValueClient}) => {
     const value = (e.target.value)
     setName(e.target.value);
     setnameValue (value)
-    setIsValid(e.target.value.length >= 3 && e.target.value.length <= 10);
+    setIsValid(e.target.value.length >= 3 && e.target.value.length <= 15);
   }
 
   const handleFocus = () => {
@@ -50,7 +50,7 @@ const Naming = ({setnameValueClient}) => {
               onBlur={handleBlur}
               className={!isValid && isFocused ? s.invalid : ''}
             />
-            {!isValid && isFocused && <p className={s.errorMessage}>Имя должно содержать не менее 3 и не более 10 символов</p>}
+            {!isValid && isFocused && <p className={s.errorMessage}>Имя должно содержать не менее 3 и не более 15 символов</p>}
         </div>
         <button className={isValid ? s.nextValid : s.next} onClick={handleNextClick}>Далее</button>
     </div>

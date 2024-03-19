@@ -4,11 +4,12 @@ import s from './Male.module.css'
 import male from '../../img/male.svg'
 import female from '../../img/female.svg'
 
-const Male = () => {
+const Male = ({setGender}) => {
     const [selectedGender, setSelectedGender] = useState(null)
 
     const handleGenderSelect = (gender) => {
         setSelectedGender(gender === selectedGender ? null : gender)
+        setGender(gender)
     }
 
     const navigate = useNavigate()
@@ -25,6 +26,7 @@ const Male = () => {
                     <img 
                         className={selectedGender === 'malec' ? `${s.gender} ${s.selected}` : s.malec} 
                         onClick={() => handleGenderSelect('malec')} 
+                        
                         src={male} alt="male" 
                     />
                     <img 
