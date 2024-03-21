@@ -70,13 +70,15 @@ const Profile = ({nameClient, birthDate, gender}) => {
 
 
 
-    const changeGender = (item) =>{
-        if(item == 'malec'){
-            setPol('malec')
-        } else{
-            setPol('female')
+    const changeGender = (item) => {
+        if(item === 'malec'){
+          setPol('malec');
+          localStorage.setItem('gender', 'malec'); // сохраняем пол в localStorage
+        } else {
+          setPol('female');
+          localStorage.setItem('gender', 'female'); // сохраняем пол в localStorage
         }
-    }
+      };
 
 
     
@@ -127,6 +129,7 @@ const Profile = ({nameClient, birthDate, gender}) => {
             setPic(pisces);
         }
         scrollToPosition(0.95)
+        localStorage.setItem('sign', id.toString());
     };
     
 
@@ -136,9 +139,21 @@ const Profile = ({nameClient, birthDate, gender}) => {
 
     useEffect(() => {
         const storedName = localStorage.getItem('nickname');
+        const storedGender = localStorage.getItem('gender');
+        const storedSign = localStorage.getItem('sign');
+
+
         if (storedName) {
             setNickClient(storedName);
         }
+
+        if (storedGender) {
+            setPol(storedGender);
+          }
+
+          if (storedSign) {
+            onChangePic(parseInt(storedSign)); // вызываем функцию с учётом сохранённого знака
+          }
     }, []);
 
     const onChangeName = () => {
