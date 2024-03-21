@@ -55,11 +55,13 @@ const NewSign = () => {
         navigate('/main');
     };
 
+    const endSign = selectImg(id)
+
     return (
         <div className={s.main}>
             <div className={s.info}>
                 <p>Ваш знак зодиака</p>
-                <img src={selectImg(id)} alt={`sign_${id}`} />
+                <img src={endSign} alt={`sign_${id}`} />
             </div>
             <div className={s.buttons}>
                 <button onClick={onNext} className={s.next}>Далее</button>

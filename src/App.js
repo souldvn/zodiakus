@@ -22,6 +22,7 @@ function App() {
   const [birthDate, setBirthDate] = useState('');
   const [nameClient, setnameValueClient] = useState('')
   const [gender, setGender] = useState('')
+  
 
   
 
@@ -33,20 +34,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/main" element={<Main/>}/>
-        <Route path="/profile" element={<Profile nameClient={nameClient} birthDate={birthDate} gender={gender}/>}/>
-
+        <Route path="/profile" element={<Profile nameClient={nameClient} birthDate={birthDate} gender={gender} />}/>
         <Route path = "/naming" element = {<Naming setnameValueClient={setnameValueClient}/>}/>
         <Route path='/gender' element = {<Male setGender={setGender}/>}/>
         <Route path = '/date' element={<Birdth setBirthDate={setBirthDate} />}/>   
-        
-
-
         <Route path = '/loading' element = {<Loading/>}/>
-
         <Route path = '/sign' element={<YourSign birthDate={birthDate}/>}/>
         <Route path = '/choose' element = {<Choose/>}/>
         <Route path="/newSign/:id" element={<NewSign />} />
-
       </Routes>
     </Router>
 

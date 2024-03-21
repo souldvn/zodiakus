@@ -20,11 +20,54 @@ import capricorn from '../../sings/kozerog.svg';
 import aquarius from '../../sings/vodoley.svg';
 import pisces from '../../sings/ryby.svg';
 
+
+const getSign = (month, day) => {
+    if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
+      return aries;
+    } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
+      return taurus;
+    } else if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) {
+      return gemini;
+    } else if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) {
+      return cancer;
+    } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
+      return leo;
+    } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
+      return virgo;
+    } else if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) {
+      return libra;
+    } else if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) {
+      return scorpio;
+    } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
+      return sagittarius;
+    } else if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+      return capricorn;
+    } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
+      return aquarius;
+    } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
+      return pisces;
+    }
+  };
+
+
+
+
 const Profile = ({nameClient, birthDate, gender}) => {
+
+    
+    
+    const dateParts = birthDate.split('-');
+    const month = parseInt(dateParts[1]);
+    const day = parseInt(dateParts[2]);
+    const signImage = getSign(month, day);
+
 
     const [nickClient, setNickClient] = useState(nameClient);
     const [newNickName, setNewNickName] = useState('');
     const [pol, setPol] = useState(gender)
+
+    const [pic, setPic] = useState(signImage)
+
 
 
     const changeGender = (item) =>{
@@ -44,6 +87,48 @@ const Profile = ({nameClient, birthDate, gender}) => {
             return <img src={woman}/>
         }
     }
+
+
+    function scrollToPosition(position) {
+        // Вычисляем высоту на 25% от высоты страницы
+        const scrollTo = window.innerHeight * position;
+        // Плавно прокручиваем страницу к заданной позиции
+        window.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth' // Для плавного скролла
+        });
+      }
+
+    const onChangePic = (id) => {
+        id = parseInt(id); // Convert id to integer
+        if (id === 1) {
+            setPic(aries);
+        } else if (id === 2) {
+            setPic(taurus);
+        } else if (id === 3) {
+            setPic(gemini);
+        } else if (id === 4) {
+            setPic(cancer);
+        } else if (id === 5) {
+            setPic(leo);
+        } else if (id === 6) {
+            setPic(virgo);
+        } else if (id === 7) {
+            setPic(libra);
+        } else if (id === 8) {
+            setPic(scorpio);
+        } else if (id === 9) {
+            setPic(sagittarius);
+        } else if (id === 10) {
+            setPic(capricorn);
+        } else if (id === 11) {
+            setPic(aquarius);
+        } else if (id === 12) {
+            setPic(pisces);
+        }
+        scrollToPosition(0.95)
+    };
+    
 
     
 
@@ -97,8 +182,7 @@ const Profile = ({nameClient, birthDate, gender}) => {
                     <div className={s.moneygroup}>
                         <img className={s.coin} src={coin}></img>
                     <div className={s.coinline}>4567</div>
-                    </div>
-                    
+                    </div>                   
                     </div>       
                 </div>
             </div>
@@ -141,7 +225,7 @@ const Profile = ({nameClient, birthDate, gender}) => {
                     <p>Знак зодиака</p>
                 </div>
                 <div className={s.sign}>
-                    <img src={leo}/>
+                    <img src={pic}/>
                 </div>                
             </div>         
         </div>

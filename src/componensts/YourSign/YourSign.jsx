@@ -44,6 +44,7 @@ const getSign = (month, day) => {
 };
 
 const YourSign = ({ birthDate}) => {
+
   const dateParts = birthDate.split('-');
   const month = parseInt(dateParts[1]);
   const day = parseInt(dateParts[2]);
