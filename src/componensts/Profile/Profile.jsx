@@ -24,14 +24,30 @@ const Profile = ({nameClient, birthDate, gender}) => {
 
     const [nickClient, setNickClient] = useState(nameClient);
     const [newNickName, setNewNickName] = useState('');
+    const [pol, setPol] = useState(gender)
 
+
+    const changeGender = (item) =>{
+        if(item == 'malec'){
+            setPol('malec')
+        } else{
+            setPol('female')
+        }
+    }
+
+
+    
     const sex = () =>{
-        if(gender === 'malec'){
+        if(pol === 'malec'){
             return <img src={man}/>
         } else {
             return <img src={woman}/>
         }
     }
+
+    
+
+
 
     useEffect(() => {
         const storedName = localStorage.getItem('nickname');
@@ -116,8 +132,8 @@ const Profile = ({nameClient, birthDate, gender}) => {
                     <p>Пол аватара</p>
                 </div>
                 <div className={s.gender}>
-                    <img src={man}/>
-                    <img src={woman}/>
+                    <img onClick={() => changeGender('malec')} className={pol === 'female' ? s.notSelected : ''} src={man} alt="Male" />
+                    <img onClick={() => changeGender('female')} className={pol === 'malec' ? s.notSelected : ''} src={woman} alt="Male" />
                 </div>                
             </div>
             <div className={s.name}>

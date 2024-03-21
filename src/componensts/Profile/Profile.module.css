@@ -187,3 +187,7 @@
     width: 160px;
 }
 
+.notSelected{
+    opacity: 40%;
+}
+
