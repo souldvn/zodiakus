@@ -128,8 +128,10 @@ const Profile = ({nameClient, birthDate, gender}) => {
         } else if (id === 12) {
             setPic(pisces);
         }
-        scrollToPosition(0.95)
+
         localStorage.setItem('sign', id.toString());
+        scrollToPosition(0)
+        
     };
     
 
@@ -154,7 +156,7 @@ const Profile = ({nameClient, birthDate, gender}) => {
           if (storedSign) {
             onChangePic(parseInt(storedSign)); // вызываем функцию с учётом сохранённого знака
           }
-    }, []);
+    }, [onChangePic]);
 
     const onChangeName = () => {
         if (newNickName.length >= 3 && newNickName.length <= 15) {
@@ -212,6 +214,7 @@ const Profile = ({nameClient, birthDate, gender}) => {
                 className={s.inputName}
               type='text' 
               placeholder={nickClient}
+              
               onChange={(e) => setNewNickName(e.target.value)}
             />
             </div>
@@ -222,8 +225,10 @@ const Profile = ({nameClient, birthDate, gender}) => {
                 </div>                
                 <input
                 className={s.inputName}
-              type='text' 
-              placeholder={formattedBirthDate}
+                
+                placeholder={formattedBirthDate}
+                
+                
             />
             </div>
             <div className={s.name}>
