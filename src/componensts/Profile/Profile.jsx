@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import s from './Profile.module.css'
 import close from '../../icons/close.svg'
 import man from '../../icons/genMan.svg'
@@ -53,6 +53,8 @@ const getSign = (month, day) => {
 
 
 const Profile = ({nameClient, birthDate, gender}) => {
+
+    const ref = useRef(null)
 
     
     
@@ -159,6 +161,7 @@ const Profile = ({nameClient, birthDate, gender}) => {
     }, [onChangePic]);
 
     const onChangeName = () => {
+        ref.current.focus()
         if (newNickName.length >= 3 && newNickName.length <= 15) {
             setNickClient(newNickName);
             localStorage.setItem('nickname', newNickName); // Сохраняем новый никнейм в локальное хранилище
@@ -208,9 +211,11 @@ const Profile = ({nameClient, birthDate, gender}) => {
             <div className={s.name}>
                 <div className={s.edit}>
                     <p>Имя</p>
-                <img onClick={onChangeName} src={edit}/>
+                <img onClick={onChangeName}  src={edit}/>
                 </div>                
                 <input
+                // onFocus={true}
+                ref = {ref}
                 className={s.inputName}
               type='text' 
               placeholder={nickClient}
@@ -218,19 +223,19 @@ const Profile = ({nameClient, birthDate, gender}) => {
               onChange={(e) => setNewNickName(e.target.value)}
             />
             </div>
-            <div className={s.name}>
+            {/* <div className={s.name}>
                 <div className={s.edit}>
                     <p>Дата рождения</p>
                 <img src={edit}/>
                 </div>                
                 <input
                 className={s.inputName}
-                
+                type='date'
                 placeholder={formattedBirthDate}
                 
                 
             />
-            </div>
+            </div> */}
             <div className={s.name}>
                 <div className={s.edit}>
                     <p>Пол аватара</p>

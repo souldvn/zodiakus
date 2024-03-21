@@ -32,6 +32,7 @@ function App() {
     <div className="App">
     <Router>
       <Routes>
+        localStorage.clear()
         <Route path="/" element={<Welcome />} />
         <Route path="/main" element={<Main/>}/>
         <Route path="/profile" element={<Profile nameClient={nameClient} birthDate={birthDate} gender={gender} />}/>
